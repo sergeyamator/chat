@@ -6,7 +6,18 @@ import Chat from './components/chat';
 
 require("./assets/styles/app.scss");
 
+let data = [
+  {
+    name: 'Sergey',
+    messages: ['Привет', 'Как дела?']
+  },
+  {
+    name: 'Dima',
+    messages: ['Привет', 'Хорошо']
+  }
+];
+
 ReactDOM.render(
-  <Chat />,
+  <Chat messages={data} />,
   document.getElementById('chat')
 );

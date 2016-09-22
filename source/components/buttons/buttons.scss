@@ -1,0 +1,29 @@
+.buttons {
+  text-align: center;
+}
+
+.send-button,
+.clear-button {
+  border: 1px solid cadetblue;
+  padding: 10px;
+  height: 45px;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  color: #251f1f;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(darkseagreen, 0.5);
+  }
+}
+
+.send-button {
+  text-decoration: none;
+}
+
+.clear-button {
+  margin-left: 45px;
+  background: none;
+  cursor: pointer;
+}
