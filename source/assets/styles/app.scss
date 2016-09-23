@@ -8,3 +8,21 @@
   padding: 15px;
   border: 1px solid grey;
 }
+
+.clear-chat {
+  margin-top: 15px;
+  text-align: center;
+
+  button {
+    border: 1px solid #a08785;
+    padding: 10px;
+    height: 45px;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    color: #251f1f;
+    transition: 0.3s;
+    background: none;
+    cursor: pointer;
+  }
+}

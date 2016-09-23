@@ -6,18 +6,25 @@ import Chat from './components/chat';
 
 require("./assets/styles/app.scss");
 
-let data = [
-  {
-    name: 'Sergey',
-    messages: ['Привет', 'Как дела?']
-  },
-  {
-    name: 'Dima',
-    messages: ['Привет', 'Хорошо']
-  }
-];
+let data = localStorage.getItem('messages');
+
+if (!data) {
+  data = [
+    {
+      name: 'Sergey',
+      messages: ['']
+    },
+    {
+      name: 'Dima',
+      messages: ['']
+    }
+  ];
+} else {
+  data = JSON.parse(localStorage.getItem('messages'))
+}
+
 
 ReactDOM.render(
-  <Chat messages={data} />,
+  <Chat messages={data}/>,
   document.getElementById('chat')
 );
