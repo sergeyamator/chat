@@ -28,20 +28,22 @@ class Chat extends React.Component {
       this.setState({
         data: data,
         currentUser: 'second'
-      });
+      }, saveToLocalStorage);
     } else {
       data[1].messages.push(message);
 
       this.setState({
         data: data,
         currentUser: 'first'
-      });
+      }, saveToLocalStorage);
     }
 
     input.value = '';
 
-    localStorage.setItem('messages', JSON.stringify(data));
-    localStorage.setItem('currentUser', this.state.currentUser);
+    function saveToLocalStorage() {
+      localStorage.setItem('messages', JSON.stringify(data));
+      localStorage.setItem('currentUser', this.state.currentUser);
+    }
   };
 
   resetChat = () => {
